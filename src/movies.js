@@ -52,14 +52,14 @@ function dramaMoviesScore(arry) {
       return acc
     },0);
   let dramaMoviesAvg = Number(totalScore / dramaMovies.length).toFixed(2);
-  
+  return dramaMoviesAvg;
 }
 
-console.log(dramaMoviesScore(movies));
+dramaMoviesScore(movies);
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 function orderByYear(arr) {
-  const order = [...arr].sort((year, year1) => year - year1);
+  const order = [...arr].sort((movie, movie1) => movie.year - movie1.year);
   return order;
 }
 orderByYear(movies);
